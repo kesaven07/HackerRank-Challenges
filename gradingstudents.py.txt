@@ -1,0 +1,26 @@
+n = int(input())
+grades = []
+for i in range(n):
+    x = int(input())
+    grades.append(x)
+    
+answers = []
+for i in grades:
+    if i<38:
+        answers.append(i)
+        
+    else:
+        mod = i%5
+        if mod<3:
+            answers.append(i)
+            
+        else:
+            while mod!=0:
+                i+=1
+                mod = i%5
+                
+            answers.append(i)
+            
+            
+for x in answers:
+    print(x)
